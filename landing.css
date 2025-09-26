@@ -1,0 +1,50 @@
+body, html {
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(135deg, #ff4de0, #1ed760);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+}
+
+.landing-container {
+  text-align:center;
+  background: rgba(0,0,0,0.5);
+  padding:2rem 3rem;
+  border-radius:15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.landing-container h1 {
+  font-size:3rem;
+  margin-bottom:1rem;
+}
+
+.landing-container p {
+  font-size:1.2rem;
+  margin-bottom:2rem;
+}
+
+#enterBtn {
+  padding: 0.8rem 2rem;
+  font-size:1.2rem;
+  background:#ff4de0;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#enterBtn:hover {
+  background:#ff66e0;
+}
+
+.note {
+  margin-top:1rem;
+  font-size:0.9rem;
+  color:#ddd;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎵 VibeWave</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>🎵 VibeWave</h2>
+  <a href="#" id="navHome"><i class="fas fa-home"></i> Home</a>
+  <a href="#" id="navBrowse"><i class="fas fa-search"></i> Browse</a>
+  <a href="#" id="navLibrary"><i class="fas fa-book"></i> Library</a>
+</div>
+
+<div class="main-content" id="mainContent">
+  <!-- Home Section -->
+  <div id="homeSection">
+    <h3>Trending Playlists</h3>
+    <div class="row" id="playlistContainer"></div>
+  </div>
+
+  <!-- Browse Section -->
+  <div id="browseSection" style="display:none;">
+    <h3>Browse</h3>
+    <input type="text" class="form-control mb-3" id="browseSearch" placeholder="Search playlists or songs...">
+    <div class="row" id="browsePlaylistContainer"></div>
+  </div>
+
+  <!-- Library Section -->
+  <div id="librarySection" style="display:none;">
+    <h3>Your Library</h3>
+    <div class="row" id="libraryPlaylistContainer"></div>
+  </div>
+
+  <!-- Playlist Detail Section -->
+  <div id="playlistDetailSection" style="display:none;">
+    <button class="btn btn-sm btn-outline-light mb-3" id="backHomeBtn"><i class="fas fa-arrow-left"></i> Back</button>
+    <h3 id="playlistTitle"></h3>
+    <ul class="list-group mb-3 song-list" id="songList"></ul>
+  </div>
+</div>
+
+<!-- Mini Music Player -->
+<div class="mini-player" id="miniPlayer">
+  <img src="" id="miniCover" alt="cover">
+  <div>
+    <div id="miniTitle">—</div>
+    <div id="miniArtist" class="small text-muted">—</div>
+  </div>
+  <div class="controls">
+    <button class="btn btn-sm btn-light" id="miniPrev"><i class="fas fa-backward"></i></button>
+    <button class="btn btn-sm btn-light" id="miniPlay"><i class="fas fa-play"></i></button>
+    <button class="btn btn-sm btn-light" id="miniNext"><i class="fas fa-forward"></i></button>
+    <button class="btn btn-sm btn-light" id="shuffleBtn"><i class="fas fa-random"></i></button>
+    <button class="btn btn-sm btn-light" id="repeatBtn"><i class="fas fa-redo"></i></button>
+  </div>
+</div>
+
+<audio id="audioPlayer" preload="metadata"></audio>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

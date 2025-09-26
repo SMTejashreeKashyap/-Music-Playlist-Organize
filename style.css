@@ -1,0 +1,95 @@
+:root {
+  --bg-dark: #121212;
+  --accent: #ff4de0; /* neon pink/purple for unique branding */
+  --accent2: #1ed760; /* green accent for playlists */
+  --text-light: #fff;
+  --text-muted: #b3b3b3;
+}
+
+body {
+  font-family:'Poppins',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text-light);
+  margin:0;
+  padding-bottom:90px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  font-weight:600;
+}
+.sidebar {
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width:220px;
+  background:#000;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+}
+.sidebar h2 {
+  color:var(--accent);
+  margin-bottom:2rem;
+  font-weight:bold;
+}
+.sidebar a {
+  color:var(--text-muted);
+  margin-bottom:1rem;
+  text-decoration:none;
+  font-weight:500;
+  transition: color 0.2s;
+}
+.sidebar a:hover {
+  color:var(--accent2);
+}
+
+.main-content {
+  margin-left:240px;
+  padding:1.5rem;
+}
+
+
+.playlist-card {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius:12px;
+  overflow:hidden;
+  padding:1rem;
+  cursor:pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color:#fff;
+}
+.playlist-card:hover {
+  transform: scale(1.05);
+  box-shadow:0 8px 25px rgba(255,77,224,0.5);
+}
+
+.song-list li:hover {
+  background: rgba(255,77,224,0.1);
+  cursor:pointer;
+  border-radius:8px;
+}
+
+.mini-player {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#181818;
+  padding:.6rem 1rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  z-index:1050;
+  border-top:1px solid #333;
+  display:none;
+}
+.mini-player img {
+  width:50px;
+  height:50px;
+  border-radius:8px;
+  object-fit:cover;
+}
+.controls button {
+  margin-right:.3rem;
+}
